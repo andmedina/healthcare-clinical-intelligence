@@ -67,6 +67,14 @@ Production-hardening controls are also implemented: checksum-tracked idempotent 
 
 The Docker PostgreSQL, Airflow, and HAPI FHIR API workflows have been validated locally; see [validation evidence](docs/validation_evidence.md). Full OMOP conformance and production DICOM/PACS integration remain later extensions. See the [runbook](docs/runbook.md) for runnable commands.
 
+## Technology Stack
+
+- Python 3.11, SQL, and PostgreSQL
+- FHIR R4, HL7 v2, OMOP v5.4-compatible extracts, HAPI FHIR, and Synthea
+- Apache Airflow and Docker Compose
+- scikit-learn for the governed readmission baseline
+- pytest, Ruff, mypy, pre-commit, and GitHub Actions
+
 ## Developer verification
 
 ```bash
@@ -82,7 +90,7 @@ make integration
 
 ## Portfolio relationship
 
-This project complements the sibling [Healthcare Claims ETL Pipeline](../healthcare_claims_etl/): that project focuses on relational claims ETL, while this platform focuses on clinical interoperability, source fidelity, reconciliation, and longitudinal analytics.
+This project complements the standalone [Healthcare Claims ETL Pipeline](https://github.com/andmedina/healthcare-claims-etl): that project focuses on relational claims ETL, while this platform focuses on clinical interoperability, source fidelity, reconciliation, and longitudinal analytics.
 
 ## Guiding rules
 
